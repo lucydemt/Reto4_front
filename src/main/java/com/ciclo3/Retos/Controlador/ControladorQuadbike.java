@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 @RestController
 @RequestMapping("/api/Quadbike")

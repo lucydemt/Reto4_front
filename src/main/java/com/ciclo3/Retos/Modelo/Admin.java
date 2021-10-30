@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 @Entity
 @Table (name = "admin")
@@ -56,7 +56,5 @@ public class Admin implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-       
+    }       
 }

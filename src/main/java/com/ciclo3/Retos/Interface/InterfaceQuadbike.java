@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 public interface InterfaceQuadbike extends CrudRepository<Quadbike, Integer>{
     

@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 @Entity
 @Table(name="category")
@@ -58,5 +58,7 @@ public class Categoria implements Serializable{
 
     public void setQuadbikes(List<Quadbike> quadbikes) {
         this.quadbikes = quadbikes;
-    }   
+    }
+
+    
 }

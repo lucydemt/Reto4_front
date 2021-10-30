@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 @Entity
 @Table(name = "client")
@@ -89,4 +89,6 @@ public class Cliente implements Serializable{
     public void setReservations(List<Reservaciones> reservations) {
         this.reservations = reservations;
     }
+
+    
 }

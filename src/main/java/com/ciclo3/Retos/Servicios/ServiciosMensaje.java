@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 @Service
 public class ServiciosMensaje {

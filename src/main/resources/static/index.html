@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Demo Login</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+        <base href="/"/>
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        body {
+          background-image: url('img/Cuatrimoto.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        .colortitulo{
+            color:rgba(2, 2, 2, 0.836);
+        }
+
+        .button {
+        background-color: white;
+        border: none;
+        color: blue;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+.button:hover {opacity: 1}
+
+        </style>
+        
+    <body>
+        
+        <h1 class="colortitulo">#Renta de Cuatrimotos</h1>
+        <div class="container unauthenticated">
+            Para iniciar sesión con Github:
+            <a href="/oauth2/authorization/github">haz click</a>
+        </div>
+        <div class="container authenticated" style="display:none">
+            Autenticado como: <span id="user"></span>
+            <p>
+                <button class="button">
+                    <a href="menu.html">Ir a la pagina privada</a>
+                </button>
+            </p>
+            <div>
+                <button onClick="logout()" class="btn btn-primary">Logout</button>
+            </div>
+        </div>
+        <style>
+            body {
+              background-image: url('img/e4dad69dea19c43ba0e817d796d43483.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+            .colortitulo{
+                color:rgb(0, 0, 0);
+            }
+    
+            .button {
+            background-color: white;
+            border: none;
+            color: blue;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            }
+    
+    .button:hover {opacity: 1}
+    
+            </style>
+    </body>
+    
+    <script type="text/javascript">
+        $.get("/user", function (data) {
+            console.log("get");
+            console.log(data);
+            $("#user").html(data.name);
+            $(".unauthenticated").hide();
+            $(".authenticated").show();
+            
+        });
+
+
+        var logout = function () {
+            $.post("/logout", function () {
+                $("#user").html('');
+                $(".unauthenticated").show();
+                $(".authenticated").hide();
+            })
+            return true;
+        }
+    </script>
+</html>

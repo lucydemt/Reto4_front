@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ciclo3</groupId>
-	<artifactId>Retos</artifactId>
+	<artifactId>Reto4front</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Retos</name>
+	<name>Reto4front</name>
 	<description>Proyecto Ciclo 3</description>
 	<properties>
 		<java.version>11</java.version>
@@ -46,6 +46,33 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+                <!-- Dependencias para Web-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-locator-core</artifactId>
+            <version>0.47</version>
+        </dependency>
+        <!-- end dependencias web -->
+
+        <!-- dependencia oauth2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+            <version>2.5.4</version>
+        </dependency>        
+        <!-- end dependencia de oauth2 -->   
 	</dependencies>
 
 	<build>

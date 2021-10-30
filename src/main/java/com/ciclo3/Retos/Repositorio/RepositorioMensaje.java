@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 @Repository
 public class RepositorioMensaje {

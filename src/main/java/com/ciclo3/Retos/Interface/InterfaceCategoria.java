@@ -10,7 +10,7 @@ import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author Andres Cardona
+ * @author temporal
  */
 public interface InterfaceCategoria extends CrudRepository<Categoria, Integer>{
     
